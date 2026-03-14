@@ -17,13 +17,13 @@ GITHUB_RAW = f"https://raw.githubusercontent.com/{GITHUB_USER}/{GITHUB_REPO}/{GI
 FOLDER_APP = r"C:\ContabilitateAuto"
 
 FISIERE_ACTUALIZABILE = {
-    "version.json":                       r"C:\ContabilitateAuto\version.json",
-    "app/app/dashboard_multi.py":         r"C:\ContabilitateAuto\app\dashboard_multi.py",
-    "app/app/vizualizeaza_fisa.py":       r"C:\ContabilitateAuto\app\vizualizeaza_fisa.py",
-    "app/app/modules/database.py":        r"C:\ContabilitateAuto\app\database.py",
-    "app/app/modules/fisa_platitor.py":   r"C:\ContabilitateAuto\app\modules\fisa_platitor.py",
-    "app/app/modules/pdf_reader.py":      r"C:\ContabilitateAuto\app\modules\pdf_reader.py",
-    "app/app/modules/updater.py":         r"C:\ContabilitateAuto\app\modules\updater.py",
+    "version.json":              r"C:\ContabilitateAuto\version.json",
+    "app/dashboard_multi.py":    r"C:\ContabilitateAuto\app\dashboard_multi.py",
+    "app/vizualizeaza_fisa.py":  r"C:\ContabilitateAuto\app\vizualizeaza_fisa.py",
+    "app/database.py":           r"C:\ContabilitateAuto\app\database.py",
+    "app/modules/fisa_platitor.py": r"C:\ContabilitateAuto\app\modules\fisa_platitor.py",
+    "app/modules/pdf_reader.py":    r"C:\ContabilitateAuto\app\modules\pdf_reader.py",
+    "app/modules/updater.py":       r"C:\ContabilitateAuto\app\modules\updater.py",
 }
 
 def citeste_versiune_locala():
