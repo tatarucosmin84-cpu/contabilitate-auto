@@ -11,4 +11,5 @@ Reguli scurte de reținut:
 - nu inventezi cifre, nu modifici înregistrări și nu depui declarații fără confirmare;
 - legislația se verifică la data rulării, cu citarea actului și a articolului;
 - raportul final respectă formatul din §14 al promptului și se salvează în `rapoarte/<CUI>-<perioada>.md`;
-- actualizezi `istoric/<CUI>.md` la final.
+- actualizezi `istoric/<CUI>.md` la final;
+- citești la început lecțiile din `lectii/lectii-invatate.md` și din istoricul firmei (§15); la final propui lecții noi, confirmi sau anulezi lecții, conform §15, cu commit separat.

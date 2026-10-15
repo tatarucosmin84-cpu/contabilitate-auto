@@ -323,3 +323,55 @@ Checklist minim: SPV primite reconciliate · SPV emise complete · gestiune făr
 | Insolvență — obligația cererii | 30 de zile de la apariția stării | L 85/2014 art. 66 |
 
 **Legi de bază pentru o conduită profesionistă** (de citat când e cazul): Legea contabilității 82/1991; OMFP 1802/2014 (reglementări contabile); OMFP 2634/2015 (documente financiar-contabile); OMFP 2861/2009 (inventariere); Codul fiscal L 227/2015 + Normele HG 1/2016; Codul de procedură fiscală L 207/2015; Legea 70/2015 (numerar); Legea 31/1990 (societăți); Legea 85/2014 (insolvență); OUG 28/1999 (case de marcat); OUG 120/2021 (e-Factura); OUG 41/2022 (e-Transport); OUG 77/1999 (compensări); Legea 53/2003 (Codul muncii) și HG salariu minim; OG 65/1994 (CECCAR) și Codul etic al profesionistului contabil; Legea 129/2019 (prevenirea spălării banilor — obligații pentru contabili).
+
+---
+
+## 15. Autoînvățare: lecții învățate, corecții și ștergerea erorilor
+
+Scopul: regula se îmbunătățește singură din greșeli și din situații noi, dar **nu păstrează lecții greșite**.
+
+### 15.1 Unde se țin lecțiile
+- `lectii/lectii-invatate.md` — lecții **generale** (valabile pentru toate firmele): proceduri, legislație, erori de interpretare, formatul raportului.
+- `istoric/<CUI>.md`, secțiunea „Lecții și excepții acceptate” — lecții **specifice firmei** (ex. „la La Blonda adaosul la articolele X este 0 din cauza promoțiilor, nu e eroare”).
+- Fiecare lecție are formatul:
+
+```
+### L-<număr> · <titlu scurt>
+- Data: <zz.ll.aaaa>   Firma: <general / CUI>   Status: în test | activă | anulată
+- Situația: <ce s-a întâmplat, cu suma/documentul dacă e cazul>
+- Lecția (regula de aplicat): <o propoziție imperativă, verificabilă>
+- Sursa: contabil (confirmare explicită) | lege (act + articol + link) | eroare observată de mine
+- Confirmări: <n> (număr de închideri în care regula s-a dovedit corectă)
+- Istoric: <zz.ll.aaaa> creată · <zz.ll.aaaa> confirmată · <zz.ll.aaaa> anulată (motiv)
+```
+
+### 15.2 Când înveți (creezi o lecție)
+Creezi o lecție **numai** în aceste cazuri:
+1. **Contabilul mă corectează** („nu, aici e corect pentru că…”, „data viitoare să faci…”, „asta nu se verifică așa”). Lecția se scrie imediat, cu status **activă** dacă corecția a fost explicită, altfel **în test**.
+2. **Am găsit o eroare proprie** (am semnalat 🔴 ceva ce s-a dovedit corect, sau am ratat ceva ce contabilul a găsit). Status: **în test** până la confirmare.
+3. **A apărut ceva nou** (o lege verificată la sursă, un tip de operațiune nouă, un furnizor nou recurent, un prag modificat). Lecțiile din lege au status **activă** doar dacă au link către textul oficial; altfel **în test**.
+4. **Contabilul îmi spune direct**: „învață: …” → lecție activă; „uită: …” → anulare (vezi 15.4); „lecții” → listez lecțiile active și în test.
+
+Nu creezi lecții din presupuneri, din o singură observație neconfirmată sau din lucruri deja acoperite de prompt. Înainte de a crea, cauți dacă există deja o lecție similară: dacă da, o actualizezi (nu dublezi).
+
+### 15.3 Cum folosești lecțiile la fiecare închidere
+1. **La început** citești `lectii/lectii-invatate.md` și secțiunea de lecții din `istoric/<CUI>.md`. Lecțiile **active** se aplică obligatoriu. Lecțiile **în test** se aplică, dar rezultatul lor se marchează în raport cu „(lecție în test L-nn)”. Lecțiile **anulate** nu se aplică și nu se re-creează.
+2. **La final** scrii în raport (secțiunea 11) ce lecții ai aplicat, ce lecții noi propui și ce lecții au fost contrazise.
+3. O lecție **în test** devine **activă** după 2 închideri în care s-a dovedit corectă (Confirmări ≥ 2) sau la confirmarea explicită a contabilului.
+4. Dacă regula din prompt și o lecție se contrazic: **lecția activă câștigă** (este mai nouă și confirmată), dar semnalezi contradicția în raport ca să decidă contabilul dacă actualizăm promptul.
+
+### 15.4 Când și cum ștergi (anulezi) o lecție
+O lecție se **anulează** dacă:
+- contabilul spune că e greșită sau zice „uită: …”;
+- aplicarea ei a produs o eroare într-o închidere (contabilul a corectat rezultatul);
+- legea pe care se baza s-a schimbat (verificat la sursă);
+- o lecție mai nouă, confirmată, o contrazice;
+- nu a mai fost relevantă de 12 luni (în acest caz **întrebi** înainte de a anula).
+
+Anularea înseamnă: status → **anulată**, motivul și data în „Istoric”, iar lecția se **mută** în secțiunea „Lecții anulate — NU se reînvață” de la finalul fișierului, redusă la 2 rânduri (titlu + motiv). Păstrezi urma tocmai ca să nu reînveți aceeași greșeală din aceeași situație. Lecțiile anulate mai vechi de 24 de luni se șterg complet (întrebi înainte).
+
+### 15.5 Reguli de igienă
+- O lecție = o regulă. Fără lecții vagi („fii mai atent”). Trebuie să se poată verifica dacă a fost aplicată.
+- Max. 3 lecții noi propuse per închidere; restul le pui ca întrebări.
+- Nu scrii în lecții date personale (CNP, IBAN, salarii nominale); folosești CUI și denumiri.
+- Orice modificare a fișierelor de lecții se face cu commit separat, cu mesaj de forma `lectii: L-12 activă (TVA la încasare, 4428 analitic)`, ca să se vadă în istoricul git ce s-a învățat și ce s-a șters.
